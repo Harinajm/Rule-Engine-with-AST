@@ -1,0 +1,26 @@
+"C:\Users\HP\PycharmProjects\Rule Engine with AST\.venv\Scripts\python.exe" "C:\Users\HP\PycharmProjects\Rule Engine with AST\main.py" 
+AST for rule1:
+(((age > 30 AND department = Sales) OR (age < 25 AND department = Marketing)) AND (salary > 50000 OR experience > 5))
+
+AST for rule2:
+((age > 30 AND department = Marketing) AND (salary > 20000 OR experience > 5))
+
+Combined AST:
+((((age > 30 AND department = Sales) OR (age < 25 AND department = Marketing)) AND (salary > 50000 OR experience > 5)) OR ((age > 30 AND department = Marketing) AND (salary > 20000 OR experience > 5)))
+
+Evaluating data1:
+Result: True
+
+Evaluating data2:
+Result: False
+
+Evaluating data3:
+Result: True
+
+Evaluating data4:
+Result: False
+
+Modified AST:
+(((age > 35 AND department = Sales) OR (age < 25 AND department = Marketing)) AND (salary > 50000 OR experience > 5))
+
+Process finished with exit code 0
